@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Posicionamiento web</title>
+
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		background: #A4F7E5;
+		color: #333;
+		min-height: 100vh;
+	}
+
+	header {
+		background-color: #3265cc;
+		color: white;
+		padding: 1rem;
+		text-align: center;
+	}
+
+	nav {
+		margin-top: 50px;
+		float: left;
+		width: 30%;
+	}
+
+	nav button {
+		background: #3265cc;
+		border: none;
+		color: white;
+		padding: 1rem 2rem;
+		cursor: pointer;
+		font-size: 1rem;
+		transition: background 0.3s;
+		display: block;
+		width: 80%;
+		margin-bottom: 20px;
+	}
+
+	nav button:hover {
+		background: #A4F7E5;
+		color: black;
+	}
+
+	.info-box {
+		background: white;
+		width: 45%;
+		padding: 100px;
+		margin-left: 35%;
+		margin-top: 50px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	}
+
+	.Tarjeta{
+		width: 900px;
+		height: 50px;
+		background-color:#3265cc;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border-radius: 8px;
+		position: fixed;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>POSICIONAMIENTO WEB</h1>	
+</header>
+
+<nav>
+    <button onclick="mostrarContenido('SEO')">SEO</button>
+    <button onclick="mostrarContenido('SEM')">SEM</button>
+    <button onclick="mostrarContenido('VISIBILIDAD')">VISIBILIDAD EN RESULTADOS</button>
+</nav>
+
+<!-- CONTENEDOR DONDE APARECE EL TEXTO -->
+<div id="info" class="info-box">
+	<h3>Haz clic en un botón para ver la información</h3>
+</div>
+
+<script>
+function mostrarContenido(tipo){ 
+    let contenido = "";
+
+    if(tipo === "SEO"){
+        contenido = `
+            <h2>SEO</h2>
+            <p>El SEO programático o pSEO es un método de publicación que permite publicar grandes volúmenes de páginas web optimizadas para motores de búsqueda.
+			SEO es la sigla en inglés de Search Engine Optimization (optimización para motores de búsqueda) y es una práctica que consiste en optimizar tus páginas web para que se posicionen mejor en las páginas de resultados de los motores de búsqueda (SERP).
+			El SEO es una estrategia de marketing eficaz y económica que ayuda a atraer tráfico a un sitio web y a aumentar las tasas de conversión.
+            </p>
+        `;
+    }
+
+    if(tipo === "SEM"){
+        contenido = `
+            <h2>SEM</h2>
+            <p>El semáforo de un subproceso es una variable especial que se puede aumentar o disminuir garantizando el acceso atómico.
+			En el vasto universo de la programación web, se erige una poderosa herramienta conocida como SEM. Este acrónimo, proveniente de las palabras Search Engine Marketing, engloba una serie de estrategias destinadas a potenciar la visibilidad de un sitio en los motores de búsqueda.
+ 			Las ventajas que ofrece el SEM son tan variadas como poderosas. Desde la posibilidad de segmentar audiencias específicas hasta medir con precisión el retorno de inversión, esta estrategia se erige como un pilar fundamental en el arsenal de cualquier programador web en la actualidad.</p>
+        `;
+    }
+
+    if(tipo === "VISIBILIDAD"){
+        contenido = `
+            <h2>VISIBILIDAD EN RESULTADOS</h2>
+            <p>La visibilidad SEO (también llamada "visibilidad de búsqueda orgánica") representa la probabilidad de que los usuarios vean y hagan clic en tu sitio web en los resultados de búsqueda orgánica. Cuantas más palabras clave tengas como objetivo y más alto sea tu ranking para ellas, mayor será tu visibilidad SEO.
+			Y se refleja como una métrica llamada puntuación de visibilidad SEO.
+			Muchas herramientas SEO incluyen sus propias versiones de esta métrica. Y se expresa como un porcentaje y normalmente se basa en un conjunto fijo de palabras clave rastreadas, tu clasificación en ellas y las tasas de clics estimadas (CTR) basadas en esas clasificaciones. </p>
+        `;
+    }
+
+    // Insertar el contenido en el contenedor
+    document.getElementById("info").innerHTML = contenido;
+}
+</script>
+
+<div class="Tarjeta">
+	<p style="font-style: italic">Romero Gómez Celeste 14/Nov/2025</p>
+</div>
+
+</body>
+</html>
+
